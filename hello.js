@@ -1,40 +1,39 @@
-var Greeting = /** @class */ (function () {
-    function Greeting() {
+// class Greeting { 
+//     greet():any { 
+//        return "Good evening!!! How are you, Remi? ";
+//     } 
+//  } 
+//  var obj = new Greeting(); 
+//  obj.greet();
+var Computer = /** @class */ (function () {
+    function Computer() {
     }
-    Greeting.prototype.greet = function () {
-        return "Good evening!!! How are you, Remi? ";
+    // a method that sets the make to apple
+    Computer.prototype.setMake = function () {
+        this.make = "apple";
     };
-    return Greeting;
+    //a method that sets the keyboard
+    Computer.prototype.setkeyboard = function () {
+        this.keyboard = "US";
+    };
+    Computer.prototype.isKeyboardUSA = function () {
+        if (this.keyboard == "US") {
+            return "Really good!";
+        }
+        else {
+            this.keyboard = "GB";
+            console.log("The keyboard is GB");
+        }
+    };
+    return Computer;
 }());
-var obj = new Greeting();
-obj.greet();
-// color , 
-// hight
-// width
-// capacity
-var Bottle = /** @class */ (function () {
-    function Bottle() {
-    }
-    // a method to set the bottle height to 1.2 cm
-    Bottle.prototype.setHight = function () {
-        this.hight = 1.2;
-    };
-    Bottle.prototype.message = function () {
-        return "thank you for buying coca cola";
-    };
-    return Bottle;
-}());
-var Evian = new Bottle();
-Evian.color = "red";
-console.log(Evian);
-var coca = new Bottle();
-coca.color = "green";
-coca.setHight();
-console.log(coca.message());
-// console.log(coca);
-var GMessage = document.getElementById("gmessage");
-var color = document.getElementById("color");
-var bmessage = document.getElementById("bmessage");
-GMessage.innerHTML = obj.greet();
-color.innerHTML = coca.color;
-bmessage.innerHTML = coca.message();
+var apple = new Computer();
+apple.setkeyboard();
+apple.isKeyboardUSA();
+console.log(apple);
+// let GMessage = document.getElementById("gmessage");
+// let color = document.getElementById("color");
+// let bmessage = document.getElementById("bmessage");
+// GMessage.innerHTML = obj.greet();
+// color.innerHTML = coca.color;
+// bmessage.innerHTML = coca.message(); 
