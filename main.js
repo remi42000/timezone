@@ -15,21 +15,23 @@ let btnShanghai=document.getElementById("shanghai");
 let btnMexicocity=document.getElementById("mexicocity");
 
 async function getData(e) {
-     // console.log(btnParis);
-     if (e.target=="button#paris"){
+     //<button id="paris">PARIS</button>
+     console.log(e.returnValue);
+     console.log(e.path[0]);
+     if (e.target==e.path[0]){
           const response=await fetch(API_URL+city[0]);
           const data=await response.json();
           const {time_24} = data;
           console.log(time_24);
           parisTime.textContent=time_24;
      }
-//     if (e.target=="button#newyork"){
-//           const response=await fetch(API_URL+city[1]);
-//           const data=await response.json();
-//           const {time_24} = data;
-//           console.log(time_24);
-//           newyorkTime.textContent=time_24;
-//      }
+     else if (e.target==e.path[0]){
+          const response=await fetch(API_URL+city[1]);
+          const data=await response.json();
+          const {time_24} = data;
+          console.log(time_24);
+          newyorkTime.textContent=time_24;
+     }
     
 }
 
