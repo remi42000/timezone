@@ -5,7 +5,7 @@ let city=["Europe/Paris","America/New_York","Europe/Moscow","Asia/Shanghai","Ame
 let parisTime=document.getElementById("parisTime");
 let newyorkTime=document.getElementById("newyorkTime");
 let moscowTime=document.getElementById("moscowTime");
-let shangaiTime=document.getElementById("shangaiTime");
+let shanghaiTime=document.getElementById("shanghaiTime");
 let mexicocityTime=document.getElementById("mexicocityTime");
 
 let btnParis=document.getElementById("paris");
@@ -16,21 +16,42 @@ let btnMexicocity=document.getElementById("mexicocity");
 
 async function getData(e) {
      //<button id="paris">PARIS</button>
-     console.log(e.returnValue);
+     console.log(e.target.id);
      console.log(e.path[0]);
-     if (e.target==e.path[0]){
+     if (e.target.id=="paris"){
           const response=await fetch(API_URL+city[0]);
           const data=await response.json();
           const {time_24} = data;
           console.log(time_24);
           parisTime.textContent=time_24;
      }
-     else if (e.target==e.path[0]){
+     else if (e.target.id=="newyork"){
           const response=await fetch(API_URL+city[1]);
           const data=await response.json();
           const {time_24} = data;
           console.log(time_24);
           newyorkTime.textContent=time_24;
+     }
+     else if (e.target.id=="moscow"){
+          const response=await fetch(API_URL+city[2]);
+          const data=await response.json();
+          const {time_24} = data;
+          console.log(time_24);
+          moscowTime.textContent=time_24;
+     }
+     else if (e.target.id=="shanghai"){
+          const response=await fetch(API_URL+city[3]);
+          const data=await response.json();
+          const {time_24} = data;
+          console.log(time_24);
+          shanghaiTime.textContent=time_24;
+     }
+     else  {
+          const response=await fetch(API_URL+city[4]);
+          const data=await response.json();
+          const {time_24} = data;
+          console.log(time_24);
+      mexicocityTime.textContent=time_24;
      }
     
 }
@@ -44,13 +65,13 @@ btnNewyork.addEventListener("click", function(e) {
      console.log(e);
      getData(e);
  });
-btnMoscow.addEventListener("click", function() {
-     getData();
+btnMoscow.addEventListener("click", function(e) {
+     getData(e);
  });
-btnShanghai.addEventListener("click", function() {
-     getData();
+btnShanghai.addEventListener("click", function(e) {
+     getData(e);
  });
-btnMexicocity.addEventListener("click", function() {
-     getData();
+btnMexicocity.addEventListener("click", function(e) {
+     getData(e);
  });
 
