@@ -1,1 +1,1 @@
-alert("Hello! I am an alert box!!");
+alert("link ok between html and main.js");
