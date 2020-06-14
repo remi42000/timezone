@@ -14,8 +14,7 @@ let btnMoscow=document.getElementById("moscow");
 let btnShanghai=document.getElementById("shanghai");
 let btnMexicocity=document.getElementById("mexicocity");
 
-async function getData(e) {
-     //<button id="paris">PARIS</button>
+async function getData(e) {             
      console.log(e.target.id);
      console.log(e.path[0]);
      if (e.target.id=="paris"){
