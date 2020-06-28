@@ -1,41 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width= , initial-scale=1.0">
-    <title>time zone international</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>time zone international</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="d-flex justify-content-center align-content-center"> 
-   <div class="container">
-    <h1> <span>Time Zone World Wide</span></h1>
-    <h2>Time zone list: </h2>
-   
-    <button id="paris" class="btn btn-outline-primary">PARIS</button>
-    <div ><p id="parisTime"></p></div>
-     
-    <button id="newyork" class="btn btn-outline-primary">NEW YORK</button>
-    <div ><p id="newyorkTime"></p></div>
-     
-    <button id="moscow" class="btn btn-outline-primary">MOSCOW</button>
-    <div ><p id="moscowTime"></p></div>
-     
-    <button id="shanghai" class="btn btn-outline-primary">SHANGHAI</button>
-    <div ><p id="shanghaiTime"></p></div>
-     
-    <button id="mexicocity" class="btn btn-outline-primary">MEXICO CITY</button>
-    <div ><p id="mexicocityTime"></p></div>
-   </div>
-     <script src="main.js"></script>
-</body>
+<style>
+</style>
+<body class="d-flex align-items-center"> 
+  <div class="container">
+    <h1 class="display-4 text-center">Time Zone World Wide</h1>
+    <h2 class="text-center font-weight-light">Time zone list: </h2>
+    
+    <div class="row align-items-center">
+      <div class="col">
+        <div class="row">
+          <div class="col d-flex flex-column align-items-center justify-content-around">
+            <div class="theParis">
+              <button id="paris" class="btn btn-outline-primary">PARIS</button>
+              <div><p id="parisTime"></p></div>
+            </div>
+            <div class="theNewYork">
+              <button id="newyork" class="btn btn-outline-primary">NEW YORK</button>
+              <div><p id="newyorkTime"></p></div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="theMoscow">
+              <button id="moscow" class="btn btn-outline-primary">MOSCOW</button>
+              <div><p id="moscowTime"></p></div>
+            </div>
+            
+            <div class="theMexicoCitytime">
+              <button id="mexicocity" class="btn btn-outline-primary">MEXICO CITY</button>
+              <div><p id="mexicocityTime"></p></div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="theShanghaiTime">
+          <button id="shanghai" class="btn btn-outline-primary">SHANGHAI</button>
+          <div><p id="shanghaiTime"></p></div>
+        </div>          
+        
+      </div>
+    </div>
+  </div>
 
-     
+  <script src="main.js"></script>
+
+</body>    
 </html>
 
 

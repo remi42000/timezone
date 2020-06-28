@@ -1,3 +1,31 @@
+body {
+     min-height: 100vh;
+     /* background-color: black; */
+}
+
 .container {
-     border: black 1px !important;
+     border: black 1px solid;
+     min-height: 70vh;
+     background-image: url('/img/globe.png');
+     background-repeat: no-repeat;
+     background-position: center center;
+     background-size: 80%;
+}
+
+.col {
+     border: black 1px solid;
+     min-height: 40vh;
+}
+
+.row {
+     border: black 1px solid;
+     /* min-height: 50vh; */
+}
+
+.theShanghaiTime {
+     /* min-height: 20vh; */
+}
+
+.theParis {
+     border: black 1px solid;
 }
