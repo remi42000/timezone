@@ -1,4 +1,4 @@
-const API_URL = `https://api.ipgeolocation.io/timezone?apiKey=3bc8d8fbdeb548cbae0820f85e56de84&tz=`;
+const API_URL = `https://api.ipgeolocation.io/timezone?apiKey=c1f95a93d15d4658b43aa33b180a50ab&tz=`;
 let city = ["Europe/Paris", "America/New_York", "Europe/Moscow", "Asia/Shanghai", "America/Mexico_City"];
 
 let parisTime = document.getElementById("parisTime");
